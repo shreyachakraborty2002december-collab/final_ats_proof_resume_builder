@@ -1,0 +1,119 @@
+.file-upload {
+  padding: var(--space-6);
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--transition-base);
+  border-style: dashed;
+  border-width: 2px;
+  border-color: var(--border-default);
+  margin-bottom: var(--space-6);
+}
+
+/* Compact variant — used inside cover letter form */
+.file-upload.compact {
+  padding: var(--space-3) var(--space-4);
+  margin-bottom: 0;
+}
+.file-upload.compact .upload-icon-wrap { width: 32px; height: 32px; }
+.file-upload.compact .upload-title     { font-size: var(--font-xs); }
+.file-upload.compact .upload-subtitle  { font-size: 10px; }
+
+
+.file-upload:hover,
+.file-upload.drag-over {
+  border-color: var(--accent-mid);
+  background: rgba(168, 85, 247, 0.05);
+  box-shadow: var(--shadow-glow);
+}
+
+.file-upload.has-file {
+  border-style: solid;
+  border-color: var(--color-success);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.file-upload.has-file:hover {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.15);
+}
+
+.file-upload-prompt {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.upload-icon-wrap {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-accent-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-accent);
+  flex-shrink: 0;
+}
+
+.upload-title {
+  font-size: var(--font-base);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: left;
+}
+
+.upload-subtitle {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  text-align: left;
+  margin-top: 2px;
+}
+
+.file-upload-info {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.file-icon-success {
+  color: var(--color-success);
+  flex-shrink: 0;
+}
+
+.file-details {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  flex: 1;
+  min-width: 0;
+}
+
+.file-name {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.file-size {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+}
+
+.file-upload-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  color: var(--text-accent);
+  font-size: var(--font-sm);
+  font-weight: 500;
+}
+
+.file-upload-loading .spinner-ring {
+  border: 2px solid var(--border-subtle);
+  border-top-color: var(--accent-mid);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}

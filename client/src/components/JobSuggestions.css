@@ -1,0 +1,198 @@
+.job-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* --- Seniority badge --- */
+.seniority-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--gradient-accent-subtle);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-full);
+  font-size: var(--font-sm);
+  color: var(--text-accent);
+  align-self: flex-start;
+}
+
+/* --- Roles --- */
+.roles-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.roles-title {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.roles-grid {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* --- Role card --- */
+.role-card {
+  padding: var(--space-4) var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.role-card-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.role-rank {
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-accent-subtle);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-xs);
+  font-weight: 800;
+  color: var(--text-accent);
+  flex-shrink: 0;
+}
+
+.role-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.role-title {
+  font-size: var(--font-base);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.role-category {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+}
+
+.role-score {
+  font-size: var(--font-xl);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* --- Keywords --- */
+.role-keywords {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+}
+
+.keywords-label {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  white-space: nowrap;
+  padding-top: 2px;
+  min-width: 60px;
+}
+
+.keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.keyword-tag {
+  padding: 2px 8px;
+  font-size: 10px;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.keyword-match {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--color-success);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+}
+
+.keyword-missing {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--color-warning);
+  border: 1px solid rgba(245, 158, 11, 0.25);
+}
+
+/* --- AI insight --- */
+.role-ai-insight {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: rgba(168, 85, 247, 0.06);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.role-ai-insight svg {
+  color: var(--text-accent);
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.salary-range {
+  display: block;
+  margin-top: var(--space-1);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* --- Missing skills --- */
+.missing-skills-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.missing-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* --- Career advice --- */
+.career-advice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-5);
+}
+
+.advice-icon {
+  color: var(--text-accent);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.advice-title {
+  font-size: var(--font-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.advice-text {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}

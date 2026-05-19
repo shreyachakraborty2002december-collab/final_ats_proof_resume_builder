@@ -1,0 +1,123 @@
+/* ===================================================
+   ACTION BUTTONS — Premium panel
+   =================================================== */
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-5);
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Full-width generate button */
+.action-btn-generate {
+  width: 100%;
+  justify-content: center;
+  font-size: var(--font-base) !important;
+  padding: var(--space-4) !important;
+  border-radius: var(--radius-lg) !important;
+  letter-spacing: 0.01em;
+}
+
+/* Secondary row: two buttons side by side */
+.action-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2);
+}
+
+.action-row .action-btn {
+  justify-content: center;
+  font-size: var(--font-xs) !important;
+  padding: var(--space-3) var(--space-2) !important;
+}
+
+/* Download ghost */
+.download-btn {
+  width: 100%;
+  justify-content: center;
+  border-style: dashed;
+  color: var(--text-muted);
+  transition: all var(--transition-base);
+}
+
+.download-btn:hover:not(:disabled) {
+  color: var(--text-primary);
+  border-color: var(--border-accent);
+  background: rgba(168, 85, 247, 0.07);
+}
+
+/* Locked download (Pro-only) */
+.btn-download-locked {
+  width: 100%;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(234,179,8,0.10), rgba(251,191,36,0.06));
+  border: 1px dashed rgba(234,179,8,0.35);
+  color: #fbbf24;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+.btn-download-locked:hover {
+  background: linear-gradient(135deg, rgba(234,179,8,0.18), rgba(251,191,36,0.12));
+  box-shadow: 0 0 20px rgba(234,179,8,0.15);
+}
+
+.crown-gold { color: #fbbf24; }
+
+/* Download usage meter */
+.download-meter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.download-meter-bar {
+  height: 4px;
+  background: var(--bg-secondary);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.download-meter-fill {
+  height: 100%;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  transition: width 0.6s ease;
+}
+
+.download-meter-label {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* All action buttons */
+.action-btn {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .action-row { grid-template-columns: 1fr; }
+}
+
+/* Template toggle button active state */
+.btn.btn-active {
+  border-color: var(--border-accent);
+  background: rgba(168,85,247,0.10);
+  color: var(--text-accent);
+}
+
+/* Template toggle spacing */
+.builder-tmpl-toggle {
+  margin-bottom: 0;
+}
+

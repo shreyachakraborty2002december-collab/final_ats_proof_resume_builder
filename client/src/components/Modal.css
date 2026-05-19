@@ -1,0 +1,185 @@
+/* ===================================================
+   MODAL — Premium centered overlay
+   =================================================== */
+
+.modal-backdrop {
+  /* Always fills the whole viewport, sits above everything */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+
+  /* Flex centering — works on every screen size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(5, 5, 15, 0.76);
+  backdrop-filter: blur(14px) saturate(1.5);
+  -webkit-backdrop-filter: blur(14px) saturate(1.5);
+
+  /* Some breathing room so the modal doesn't kiss the edges */
+  padding: var(--space-4);
+
+  animation: backdropIn 0.2s ease forwards;
+}
+
+.modal-panel {
+  /* Sizing — never overflow viewport */
+  width: 100%;
+  max-width: 680px;
+  max-height: 88vh;
+
+  /* Let flex on the backdrop handle X/Y centering */
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  background: rgba(12, 12, 32, 0.94);
+  backdrop-filter: blur(32px) saturate(1.8);
+  -webkit-backdrop-filter: blur(32px) saturate(1.8);
+  border: 1px solid rgba(168, 85, 247, 0.22);
+  border-radius: var(--radius-2xl);
+  box-shadow:
+    0 0 0 1px rgba(255,255,255,0.04) inset,
+    0 24px 64px rgba(0,0,0,0.70),
+    0 0 90px rgba(124, 58, 237, 0.14);
+
+  /* Animation only scales — flexbox handles the position */
+  animation: modalIn 0.28s cubic-bezier(0.34, 1.36, 0.64, 1) forwards;
+}
+
+/* Size variants */
+.modal-sm { max-width: 420px; }
+.modal-md { max-width: 680px; }
+
+/* --- Header --- */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-6);
+  flex-shrink: 0;
+}
+
+.modal-title-group {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.modal-title-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--gradient-accent-subtle);
+  border: 1px solid var(--border-accent);
+  color: var(--text-accent);
+  flex-shrink: 0;
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+/* --- Close button --- */
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.modal-close:hover {
+  background: rgba(239, 68, 68, 0.12);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #ef4444;
+  transform: scale(1.08);
+}
+
+.modal-close:active { transform: scale(0.96); }
+
+/* --- Divider --- */
+.modal-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(168, 85, 247, 0.25) 30%,
+    rgba(168, 85, 247, 0.25) 70%,
+    transparent
+  );
+  flex-shrink: 0;
+}
+
+/* --- Scrollable body --- */
+.modal-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6);
+  overscroll-behavior: contain;
+}
+
+.modal-body::-webkit-scrollbar { width: 4px; }
+.modal-body::-webkit-scrollbar-track { background: transparent; }
+.modal-body::-webkit-scrollbar-thumb {
+  background: var(--border-default);
+  border-radius: var(--radius-full);
+}
+
+/* --- Responsive --- */
+@keyframes backdropIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Scale-only entry — position is handled by the flex backdrop */
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.94); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .modal-backdrop {
+    padding: var(--space-3);
+    /* Stay centered vertically on tablet/mobile too */
+    align-items: center;
+  }
+
+  .modal-panel {
+    max-width: calc(100% - var(--space-6));
+    max-height: 90vh;
+  }
+
+  .modal-title { font-size: var(--font-lg); }
+}
+
+@media (max-width: 480px) {
+  .modal-backdrop { padding: var(--space-2); }
+
+  .modal-panel {
+    max-width: 100%;
+    max-height: 94vh;
+    border-radius: var(--radius-xl);
+  }
+}

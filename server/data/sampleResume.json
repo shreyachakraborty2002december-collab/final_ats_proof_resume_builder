@@ -1,0 +1,101 @@
+{
+  "personalInfo": {
+    "name": "Alex Johnson",
+    "email": "alex.johnson@email.com",
+    "phone": "+1 (555) 123-4567",
+    "linkedin": "linkedin.com/in/alexjohnson",
+    "location": "San Francisco, CA"
+  },
+  "summary": "Results-driven full-stack developer with 5+ years of experience building scalable web applications. Proficient in React, Node.js, and cloud technologies. Passionate about delivering clean, maintainable code and mentoring junior developers.",
+  "skills": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Node.js",
+    "Express",
+    "Python",
+    "PostgreSQL",
+    "MongoDB",
+    "Docker",
+    "AWS",
+    "Git",
+    "REST APIs",
+    "GraphQL",
+    "CI/CD",
+    "Agile/Scrum"
+  ],
+  "experience": [
+    {
+      "title": "Senior Full Stack Developer",
+      "company": "TechCorp Inc.",
+      "startDate": "Jan 2022",
+      "endDate": "",
+      "current": true,
+      "bullets": [
+        "Architected and deployed microservices infrastructure serving 2M+ daily active users",
+        "Led migration from monolithic architecture to microservices, reducing deployment time by 60%",
+        "Mentored team of 5 junior developers through code reviews and pair programming sessions",
+        "Implemented CI/CD pipeline with GitHub Actions, reducing release cycle from 2 weeks to 2 days"
+      ]
+    },
+    {
+      "title": "Full Stack Developer",
+      "company": "StartupXYZ",
+      "startDate": "Jun 2019",
+      "endDate": "Dec 2021",
+      "current": false,
+      "bullets": [
+        "Developed React-based dashboard used by 500+ enterprise clients for real-time analytics",
+        "Built RESTful APIs with Node.js/Express handling 10K+ requests per minute",
+        "Optimized PostgreSQL queries reducing average response time by 45%",
+        "Collaborated with product team to define and implement 20+ feature specifications"
+      ]
+    },
+    {
+      "title": "Junior Web Developer",
+      "company": "Digital Agency Co.",
+      "startDate": "Aug 2017",
+      "endDate": "May 2019",
+      "current": false,
+      "bullets": [
+        "Built responsive websites for 15+ clients using React and modern CSS",
+        "Integrated third-party APIs including Stripe, SendGrid, and Google Maps",
+        "Participated in Agile sprints and daily standups with cross-functional team"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.S. Computer Science",
+      "institution": "University of California, Berkeley",
+      "year": "2017",
+      "gpa": "3.7"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Open Source Task Manager",
+      "description": "Full-stack task management app with real-time collaboration features. Built with React, Node.js, Socket.io, and MongoDB. 200+ GitHub stars.",
+      "technologies": ["React", "Node.js", "Socket.io", "MongoDB"],
+      "link": "https://github.com/alexj/taskmanager"
+    },
+    {
+      "name": "ML Price Predictor",
+      "description": "Machine learning model for predicting housing prices using Python, scikit-learn, and Flask API. Deployed on AWS with 92% accuracy.",
+      "technologies": ["Python", "scikit-learn", "Flask", "AWS"],
+      "link": ""
+    }
+  ],
+  "certifications": [
+    {
+      "name": "AWS Solutions Architect Associate",
+      "issuer": "Amazon Web Services",
+      "year": "2023"
+    },
+    {
+      "name": "Professional Scrum Master I",
+      "issuer": "Scrum.org",
+      "year": "2021"
+    }
+  ]
+}

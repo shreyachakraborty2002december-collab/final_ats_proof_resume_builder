@@ -1,0 +1,180 @@
+/* ===================================================
+   DASHBOARD PAGE
+   =================================================== */
+.dashboard {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+}
+
+.dashboard-body {
+  display: flex;
+  flex: 1;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--space-6);
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* Main content */
+.dashboard-main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Dashboard header row */
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.dashboard-title {
+  font-family: var(--font-display);
+  font-size: var(--font-2xl);
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.dashboard-sub {
+  font-size: var(--font-sm);
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.dashboard-actions {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+
+/* Resume grid */
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: var(--space-4);
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* Loading state */
+.dashboard-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-16);
+  color: var(--text-muted);
+  font-size: var(--font-sm);
+}
+
+/* Empty state */
+.dashboard-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-4);
+  padding: var(--space-16) var(--space-8);
+  text-align: center;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.dashboard-empty-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-xl);
+  background: var(--gradient-accent-subtle);
+  border: 1px solid var(--border-accent);
+  color: var(--text-accent);
+}
+
+.dashboard-empty h3 {
+  font-family: var(--font-display);
+  font-size: var(--font-xl);
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.dashboard-empty p {
+  font-size: var(--font-base);
+  color: var(--text-muted);
+  max-width: 360px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard-body {
+    padding: var(--space-4) var(--space-4);
+    padding-bottom: 80px; /* space for bottom nav */
+  }
+  .dashboard-header { flex-direction: column; align-items: flex-start; }
+  .dashboard-actions { width: 100%; }
+  .dashboard-actions .btn { flex: 1; justify-content: center; }
+  .resume-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .dashboard-body { padding: var(--space-3); padding-bottom: 76px; }
+  .dashboard-title { font-size: var(--font-xl); }
+}
+
+/* --- Delete confirmation content --- */
+.delete-confirm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+  padding: var(--space-2) 0 var(--space-2);
+}
+
+.delete-confirm-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.delete-confirm-text {
+  font-size: var(--font-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.delete-confirm-text strong {
+  color: var(--text-primary);
+}
+
+.delete-confirm-actions {
+  display: flex;
+  gap: var(--space-3);
+  width: 100%;
+}
+
+.delete-confirm-actions .btn {
+  flex: 1;
+  justify-content: center;
+}
+
+.delete-confirm-yes {
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.30);
+  color: #ef4444;
+}
+
+.delete-confirm-yes:hover:not(:disabled) {
+  background: rgba(239, 68, 68, 0.22);
+  border-color: rgba(239, 68, 68, 0.50);
+}
+

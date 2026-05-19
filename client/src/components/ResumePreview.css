@@ -1,0 +1,72 @@
+.resume-preview {
+  position: sticky;
+  top: var(--space-4);
+}
+
+.preview-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-16) var(--space-8);
+  color: var(--text-muted);
+  gap: var(--space-3);
+}
+
+.preview-empty-icon {
+  font-size: 3rem;
+  opacity: 0.4;
+}
+
+.preview-empty h3 {
+  font-size: var(--font-lg);
+  color: var(--text-secondary);
+}
+
+.preview-empty p {
+  font-size: var(--font-sm);
+  max-width: 280px;
+}
+
+/* ── Resume page (A4 canvas) ────────────────────────────── */
+.preview-page {
+  background: #ffffff;
+  color: #1a1a2e;
+  border-radius: var(--radius-md);
+  padding: 28px 32px;       /* balanced screen padding */
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  line-height: 1.55;
+  box-shadow: var(--shadow-lg);
+  min-height: 400px;
+  /* Allow content to expand naturally for PDF capture */
+  max-height: 80vh;
+  overflow-y: auto;
+}
+
+/* Scrollbar for preview */
+.preview-page::-webkit-scrollbar { width: 4px; }
+.preview-page::-webkit-scrollbar-thumb { background: #ccc; border-radius: 4px; }
+
+/* ── Print / PDF capture mode ───────────────────────────── */
+/* Applied programmatically before html2pdf capture */
+.preview-page.print-mode {
+  max-height: none !important;
+  overflow: visible !important;
+  /* A4 at 96dpi screen = ~794px wide; html2pdf handles scaling to PDF units */
+  width: 794px !important;
+  min-height: 1123px;
+  padding: 40px 50px !important; /* ~15mm margins */
+  box-shadow: none !important;
+  border-radius: 0 !important;
+}
+
+@media (max-width: 768px) {
+  .resume-preview { position: static; }
+  .preview-page {
+    padding: 20px 18px;
+    font-size: 10px;
+    max-height: none;
+  }
+}

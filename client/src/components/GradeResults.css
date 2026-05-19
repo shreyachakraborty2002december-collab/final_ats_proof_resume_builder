@@ -1,0 +1,144 @@
+.grade-results {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* --- Score gauge --- */
+.score-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.score-gauge {
+  position: relative;
+  width: 140px;
+  height: 140px;
+}
+
+.score-value {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.score-number {
+  font-size: var(--font-3xl);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.score-label {
+  font-size: var(--font-xs);
+  color: var(--text-muted);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.score-title {
+  font-size: var(--font-md);
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* --- Breakdown --- */
+.breakdown-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.breakdown-title {
+  font-size: var(--font-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.breakdown-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.breakdown-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.breakdown-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.breakdown-item-label {
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+}
+
+.breakdown-item-score {
+  font-size: var(--font-xs);
+  font-weight: 700;
+}
+
+/* --- Improvements --- */
+.improvements-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.improvements-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.improvement-card {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  transition: border-color var(--transition-fast);
+}
+
+.improvement-card:hover {
+  border-color: var(--border-default);
+}
+
+.improvement-icon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.improvement-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.improvement-category {
+  font-size: var(--font-xs);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.improvement-text {
+  font-size: var(--font-sm);
+  color: var(--text-secondary);
+  line-height: 1.5;
+}

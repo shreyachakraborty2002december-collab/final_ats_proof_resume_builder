@@ -1,0 +1,227 @@
+/* ============================================
+   TemplateSelector Styles
+   ============================================ */
+
+.tmpl-selector {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-bottom: var(--space-4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.tmpl-selector-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-3);
+}
+
+.tmpl-selector-title {
+  font-size: var(--font-sm);
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+}
+
+.tmpl-pro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 2px 7px;
+  background: var(--gradient-accent);
+  border-radius: var(--radius-full);
+  font-size: 10px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.tmpl-upgrade-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  background: linear-gradient(135deg, rgba(234,179,8,0.15), rgba(251,191,36,0.10));
+  border: 1px solid rgba(234,179,8,0.35);
+  border-radius: var(--radius-full);
+  color: #fbbf24;
+  font-size: var(--font-xs);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+.tmpl-upgrade-btn:hover {
+  background: linear-gradient(135deg, rgba(234,179,8,0.25), rgba(251,191,36,0.18));
+  box-shadow: 0 0 16px rgba(234,179,8,0.2);
+}
+
+/* Favourites row */
+.tmpl-favourites-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-3);
+  padding-bottom: var(--space-3);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.tmpl-fav-label {
+  font-size: 10px;
+  color: var(--color-error);
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  flex-shrink: 0;
+}
+
+.tmpl-fav-chip {
+  padding: 2px 10px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-full);
+  font-size: var(--font-xs);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.tmpl-fav-chip:hover, .tmpl-fav-chip.active {
+  border-color: var(--border-accent);
+  color: var(--text-accent);
+  background: rgba(168,85,247,0.12);
+}
+
+/* Grid */
+.tmpl-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-2);
+}
+
+@media (max-width: 1100px) {
+  .tmpl-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Card */
+.tmpl-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+}
+
+.tmpl-card:hover:not(.tmpl-card-locked) {
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(168,85,247,0.18);
+}
+
+.tmpl-card-active {
+  border-color: var(--accent-mid) !important;
+  background: rgba(168,85,247,0.08);
+  box-shadow: 0 0 0 1px rgba(168,85,247,0.35);
+}
+
+.tmpl-card-locked { opacity: 0.7; cursor: pointer; }
+
+/* Mini preview */
+.tmpl-preview {
+  position: relative;
+  height: 72px;
+  background: var(--tmpl-bg, #fff);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.tmpl-preview-header {
+  height: 18px;
+  background: var(--tmpl-header, #1a1a2e);
+}
+
+.tmpl-preview-lines {
+  padding: 5px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tmpl-preview-line {
+  height: 4px;
+  background: var(--tmpl-accent, #1a1a2e);
+  border-radius: 2px;
+  opacity: 0.35;
+  width: 70%;
+}
+
+.tmpl-preview-line-wide { width: 90%; opacity: 0.2; }
+.tmpl-preview-line-short { width: 45%; }
+
+.tmpl-lock-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5,5,15,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.7);
+}
+
+.tmpl-active-check {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-mid);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 9px;
+  color: #fff;
+  font-weight: 700;
+}
+
+/* Card info */
+.tmpl-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+.tmpl-name {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tmpl-card-active .tmpl-name { color: var(--text-accent); }
+
+.tmpl-pro-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 9px;
+  font-weight: 700;
+  color: #fbbf24;
+  flex-shrink: 0;
+}
